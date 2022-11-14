@@ -11,6 +11,7 @@ npx @backstage/create-app
 answer `y` to *Ok to proceed? (y)*
 
 Enter a name for the app. In this example I have used `my-app`.
+
 ![](images/install1.png)  
 
 Wait for the yarn-install to complete (100-150 seconds). A new directory my-app is created. The new Backstage app is created in this directory.
@@ -21,14 +22,18 @@ Change into this directory and run `yarn dev`:
 cd my-app
 yarn dev
 ```
+
 ![](images/run.png)  
-The Backstage app will start both the backend and frontend app. When the terminal shows the line *[0] Webpack compiled successfully*, the Backstage app will be ready. You can then access the Backspace app at http://localhost:3000/.   
+The Backstage app will start both the backend and frontend app. When the terminal shows the line *[0] Webpack compiled successfully*, the Backstage app will be ready. You can then access the Backspace app at http://localhost:3000/.  
+
 ![](images/openapp.png)  
 
 _Note_: this will work from VS Code Desktop (local terminal) - with local port forwarding. Not when running in the browser based environment: Backstage access. Also note that the Backstage frontend app accesses the backend API at port 7007. That means that this port must both be forwarded *and* made public. 
+
 ![](images/makeportpublic.png)  
 
 You should find your Developer Portal in good working order. Explore around - see what it has to offer in its bare, default form. 
+
 ![](images/running-app.png)  
 
 For example:
