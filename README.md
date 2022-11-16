@@ -1,5 +1,7 @@
 # gitpod-backstage-workspace
 
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/lucasjellema/gitpod-backstage-workspace)
+
 Based on [this tutorial Standing up Backstage](https://backstage.spotify.com/learn/standing-up-backstage/standing-up-backstage/1-intro/), the steps for creating a Backstage App are:
 
 In a terminal, execute this command:
