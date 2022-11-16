@@ -28,7 +28,7 @@ The Backstage app will start both the backend and frontend app. When the termina
 
 ![](images/openapp.png)  
 
-_Note_: this will work from VS Code Desktop (local terminal) - with local port forwarding. Not when running in the browser based environment: Backstage access. Also note that the Backstage frontend app accesses the backend API at port 7007. That means that this port must both be forwarded *and* made public. 
+_Note_: this will work from VS Code Desktop (local terminal) - with local port forwarding. Not when running in the browser based environment: the Backstage frontend app accesses the backend API at localhost port 7007. That means that this port must both be forwarded *and* made public. 
 
 ![](images/makeportpublic.png)  
 
