@@ -1,13 +1,13 @@
 tasks:
   - init: |
+      docker run --name backstage-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres
       echo "myapp" | npx @backstage/create-app
       cd myapp && yarn dev
-      docker run --name your-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres
 
   - name: Initialize 
     command: |
        echo "Almost ready - Running the PostgreSQL container (note: when the workspace is first started up, these commands both fail - please ignore) "
-       docker start your-postgres
+       docker start backstage-postgres
 
 
 ports:
@@ -17,7 +17,7 @@ ports:
     visibility: public
 
   # Backstage Backend API
-  - port: 3000
+  - port: 7007
     onOpen: ignore
     visibility: public
 
