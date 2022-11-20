@@ -1,9 +1,12 @@
 tasks:
   - init: |
       gp open README.md
-      docker run --name backstage-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres
+      docker run --name backstage-postgres -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword -d postgres
       echo "myapp" | npx @backstage/create-app
-      cd myapp && yarn dev
+      cp app-config.local.yaml myapp
+      cd myapp
+      yarn add --cwd packages/backend pg
+      yarn dev
 
   - name: Initialize 
     command: |
