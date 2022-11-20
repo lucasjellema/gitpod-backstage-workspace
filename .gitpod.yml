@@ -1,6 +1,7 @@
 tasks:
   - init: |
       echo "myapp" | npx @backstage/create-app
+      cd myapp && yarn dev
       docker run --name your-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres
 
   - name: Initialize 
